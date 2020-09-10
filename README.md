@@ -7,7 +7,7 @@ Won't it be nice if you could have a template where you just put your trained mo
 Well, look no further because this repository makes it as easy for you as it sounds!
 <p align = "center"><img src = "https://media.giphy.com/media/ohMtDzrhrWgnK/giphy.gif" width = 25%></p>
 
-<h2 align = "center">How to use this?</h2>
+## How to use this?
 <p align = "center"><img src = "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif" width = 50%></p>
 
 __NOTE: For now we are exclusively focused on image classification models built using tensorflow/pytorch. Later we would expand to models dealing with text,speech data as well as training using MXNet or a julia environment__
@@ -80,7 +80,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
     __NOTE:__ For the free tier, it is suggested that you use models that are small in size to avoid issues to the limited slug size Heroku Provides. Also avoid putting your Jupyter notebook files in the deployment branch to reduce the size of the assets of the app.
 
  
-<h2 align = "center">Further Work</h2>
+## Further Work 🏗
 
 - [ ] Improve the UI of the app using custom HTML,CSS or REACT
 - [ ] Make the App more descriptive
