@@ -1,0 +1,4 @@
+streamlit
+tensorflow-cpu==2.3.0
+Pillow==7.2.0
+numpy
