@@ -98,4 +98,6 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - [ ] Support for saved_model TF format
 - [ ] Add Animations
 - [ ] Dark Mode
+- [ ] Similar Efforts for a mobile app using TFLite + Flutter ( From building to serving)
+- [ ] Experiment with TFJS
 
