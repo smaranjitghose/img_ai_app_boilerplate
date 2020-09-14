@@ -48,6 +48,18 @@ __NOTE: For now we are exclusively focused on image classification models built 
     - If you have some affliation or maybe the app is made completely by you (perhaps with a group of your friends/collegeus) as a pet project, you can reflect that in the app by seaching for ```st.subheader``` and updating it
 
       [say ```st.subheader("By John Doe and Jane Doe")```]
+
+    - __SOME UPDATION OF OUR CONTACT PAGE__
+
+    - You can add the name of you(and/or your teammates), profile picture,email and affliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affliation,email 
+    - For adding multiple contributors, you can call the same function multiple times.
+    [Say 
+    ```python
+    display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com"
+    display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com"
+    ```
+    ]
+     
     
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
 - Now, we are all set to test it. Open the terminal/command prompt and type ```streamlit run app.py```
