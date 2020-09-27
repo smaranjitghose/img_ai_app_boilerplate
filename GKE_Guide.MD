@@ -13,11 +13,11 @@
 
 6. Fetch our source code using git
 
-```git clone  https://github.com/yourusername/your-project-repo-name.git ```
+  ```git clone  https://github.com/yourusername/your-project-repo-name.git ```
 
 7. Checking what we got
 
-```ls -aH ```
+  ```ls -aH ```
 
 8. Navigating to the directory that contains our source code
 
@@ -25,25 +25,25 @@
 
 9. Setting Project ID Environment Variable
 
-```export PROJECT_ID=export PROJECT_ID=your-project-name```
+  ```export PROJECT_ID=export PROJECT_ID=your-project-name```
 
 10. Now let's build our docker image and tag it for uploading
 
-```docker build -t gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
+  ```docker build -t gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
 
 11. Let's check what we got
 
-```docker images```
+  ```docker images```
 
 12. Ensure Google Cloud [Container Registry](https://cloud.google.com/container-registry) is enabled
 
 13. Authenticate Google Container Registry
 
-```gcloud auth configure-docker```
+  ```gcloud auth configure-docker```
 
 14. Let's upload our Docker Image to Google Cloud Container Registry
 
-```docker push gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
+  ```docker push gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
 
 15. Set up the project ID anf Compute Engine Zone for gloud tool
 
@@ -56,19 +56,19 @@ gcloud config set compute/zone us-central1
 
 16. Create a Kubernetes Cluster
 
-```gcloud container clusters create streamlit-cluster --num-nodes=2```
+  ```gcloud container clusters create streamlit-cluster --num-nodes=2```
 
 17. Use Kubernetes Cluster Management System to deploy our app replicas and schdeule them to run on nodes in the cluster
 
-```kubectl create deployment insurance-streamlit --image=gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
+  ```kubectl create deployment insurance-streamlit --image=gcr.io/${PROJECT_ID}/insurance-streamlit:v1```
 
 18. Expose the app to Internet traffic by creating an external IP and a Load Balancer
 
-```kubectl expose deployment insurance-streamlit --type=LoadBalancer --port 80 --target-port 8501```
+  ```kubectl expose deployment insurance-streamlit --type=LoadBalancer --port 80 --target-port 8501```
 
 19. Checking our app
 
-```kubectl get service```
+  ```kubectl get service```
 
 20. Set up a DNS***
 
