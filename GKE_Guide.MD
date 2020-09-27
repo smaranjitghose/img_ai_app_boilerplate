@@ -17,7 +17,7 @@
 
 7. Checking what we got
 
-``` ls -aH```
+```ls -aH ```
 
 8. Navigating to the directory that contains our source code
 
@@ -25,7 +25,7 @@
 
 9. Setting Project ID Environment Variable
 
-``` export PROJECT_ID=export PROJECT_ID=pycaret-streamlit-gcp```
+```export PROJECT_ID=export PROJECT_ID=your-project-name```
 
 10. Now let's build our docker image and tag it for uploading
 
