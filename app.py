@@ -1,13 +1,14 @@
 import streamlit as st
 import tensorflow.keras
+from email_validator import validate_email
 from PIL import Image, ImageOps
 import numpy as np
 import time
 
 st.beta_set_page_config(
-page_title="Title of the webpage",
-layout="centered",
-initial_sidebar_state="collapsed",
+page_title = "Title of the webpage",
+layout = "centered",
+initial_sidebar_state = "collapsed",
 )
 
 # Just making sure we are not bothered by File Encoding warnings
@@ -15,7 +16,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
 def main():
-    menu = ['Home', 'Contact']
+    menu = ['Home', 'About', 'Contact', 'Feedback']
     choice = st.sidebar.selectbox("Menu", menu)
 
     if choice == "Home":
@@ -49,6 +50,7 @@ def main():
             best_outcome = predictions[0].index(max(predictions[0]))
             print(labels[best_outcome])
             return labels[best_outcome]
+
         # Option to upload an image file with jpg,jpeg or png extensions
         uploaded_file = st.file_uploader("Choose an image...", type=["jpg","png","jpeg"])
         # When the user clicks the predict button
@@ -70,6 +72,7 @@ def main():
                     st.error("We apologize something went wrong 🙇🏽‍♂️")
             else:
                 st.error("Can you please upload an image 🙇🏽‍♂️")
+
     elif choice == "Contact":
         # Let's set the title of our Contact Page
         st.title('Get in touch')
@@ -78,11 +81,42 @@ def main():
             Function to display picture,name,affiliation and name of creators
             '''
             team_img = Image.open(path)
+
             st.image(team_img, width=350, use_column_width=False)
             st.markdown(f"## {name}")
             st.markdown(f"#### {affiliation}")
             st.markdown(f"###### Email {email}")
             st.write("------")
+
         display_team("Your Awesome Name", "./assets/profile_pic.png","Your Awesome Affliation","hello@youareawesome.com")
+
+    elif choice == "About":
+        # Let's set the title of our About page
+        st.title('About us')
+
+        def display_logo(path):
+            company_logo = Image.open(path)
+            st.image(company_logo, width=350, use_column_width=False)
+
+        # Add the necessary info
+        display_logo("./assets/profile_pic.png")
+        st.markdown('## Objective')
+        st.markdown("Write your company's objective here.")
+        st.markdown('## More about the company.')
+        st.markdown("Write more about your country here.")
+
+    elif choice == "Feedback":
+        # Let's set the feedback page complete with a form
+        st.title("Feel free to share your opinions :smile:")
+
+        user_email = st.text_input('Enter Email: ')
+        feedback = st.text_area('Feedback')
+
+        # When User clicks the send feedback button
+        if st.button('Send Feedback'):
+            # Checking if the email is valid
+            if validate_email(user_email):
+                st.success('The feedback has been shared.')
+
 if __name__ == "__main__":
     main()
