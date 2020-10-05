@@ -3,6 +3,7 @@ import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
 import time
+from send_img import send_img
 
 st.beta_set_page_config(
 page_title="Title of the webpage",
