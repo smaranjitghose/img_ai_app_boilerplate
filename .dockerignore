@@ -1,0 +1,5 @@
+__pycache__/*
+.azure-pipelines/
+.git/*
+.ipynb_checkpoints/*
+.vscode/*
