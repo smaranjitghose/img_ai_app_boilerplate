@@ -1,5 +1,18 @@
 __pycache__/*
 .azure-pipelines/
+# Information about our Git Directory
 .git/*
+# Jupyter Notebook Excreta Log
 .ipynb_checkpoints/*
+# VSCode config Log
 .vscode/*
+# Guides for Deployment
+GKE_GUIDE.MD
+Heroku_Tips.MD
+Microsoft_Azure_Guide.MD
+# Configuration Files for Heroku
+Procfile
+setup.sh
+# Our Project ReadMe
+README.MD
+
