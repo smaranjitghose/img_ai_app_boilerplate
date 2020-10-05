@@ -1,0 +1,20 @@
+__pycache__/*
+.azure-pipelines/
+# Information about our Git Repository
+.git/*
+# Our GitHub Repository's essentials: ReadMe, License, Code of Conduct, GitIgnore
+README.MD
+LICENSE
+CODE_OF_CONDUCT.MD
+.gitignore
+# Jupyter Notebook Excreta Log
+.ipynb_checkpoints/*
+# VSCode config Log
+.vscode/*
+# Guides for Deployment
+GKE_GUIDE.MD
+Heroku_Tips.MD
+Microsoft_Azure_Guide.MD
+# Configuration Files for Docker Container used in AWS, GCP or AWS
+Dockerfile
+.dockerignore
