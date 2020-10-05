@@ -40,7 +40,7 @@
         
  16. Now,we shall finally create our web app from the Docker container in the Azure Container Registry
         
-        az webapp create --name your-project-name --resource-group your-project-RG --plan your-project-SP --image your-project-registry.azurecr.io/your-project-name:latest
+    az webapp create --name your-project-name --resource-group your-project-RG --plan your-project-SP --image your-project-registry.azurecr.io/your-project-name:latest
         
 17. To redeploy the webapp
 
