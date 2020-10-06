@@ -2,6 +2,7 @@ from firebase import Firebase
 
 def feedback_db(user_email, feedback):
     # Setting the Firebase configurations of the App
+    # Check Feedback.MD to learn how to get the information
     config = {
     "apiKey": "apiKey",
     "authDomain": "projectId.firebaseapp.com",
