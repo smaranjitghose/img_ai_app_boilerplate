@@ -1,6 +1,6 @@
 import pyrebase
 
-# Copy these from the intial setup of the project
+# Configuration Information
 config = {
 "apiKey" :                   , 
 "authDomain" :        ,
@@ -11,13 +11,10 @@ config = {
 "appId" :   ,
 "measurementId" : ,
 }
-
-# path_on_cloud = " "
-# path_local = " "
-
-def send_img(path_local, path_on_cloud):
+# The path on the cloud storage of Firebase is dependent as per our setup
+def send_img(path_local, path_on_cloud = " "):
   '''
-  Pushing the file in the given local path to the path given for firebase cloud
+  Function to push the file into our Firebase storage
   '''
   firebase = pyrebase.intialize_app(config)
   storage = firebase.storage()
