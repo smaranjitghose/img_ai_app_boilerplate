@@ -67,7 +67,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
     display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com"
     ```
     ]
-     
+
 - [__Optional__] If you want to store your images in a cloud database like firebase, we have some more arrangements for you:
   - Open Your Web Browser
   - Visit Firebase [Console](https://console.firebase.google.com/)
@@ -89,13 +89,13 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Now click on the rules tab
   - Change the ``allow read, write: if request.auth != null;`` to `` allow read, write`` [Note this only for prototyping purposes. Refrain from doing this in a real-life scenario]
   - This basically allows us the upload and download the images without authenticating every time
-  - Open the ```send_img.py``` file
+  - Open the ```firebase_bro.py``` file
   - Update the config variable with the values previously stored inside the ``config.txt file`` [After this you can delete the ``config.txt`` file]
   - Save it
   - [__NOTE__:] If you are not using firebase please feel free to:
-      - remove the ``send_img.py`` file,
-      - Delete the ``from send_img import send_img`` line from the ``app.py`` file
-      - ``send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
+      - remove the ``firebase_bro.py`` file,
+      - Delete the ``import firebase_bro`` line from the ``app.py`` file
+      - ``firebase_bro.send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
       - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file
 
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
