@@ -6,13 +6,14 @@ __pycache__/*
 README.MD
 LICENSE
 CODE_OF_CONDUCT.MD
-# Jupyter Notebook Excreta Log
+# Jupyter Notebook Related Stuff
 .ipynb_checkpoints/*
+notebooks/
 # VSCode config Log
 .vscode/*
 # Guides for Deployment
 GKE_GUIDE.MD
-Heroku_Tips.MD
+Heroku_GUIDE.MD
 Microsoft_Azure_Guide.MD
 # Configuration Files for Heroku
 Procfile
