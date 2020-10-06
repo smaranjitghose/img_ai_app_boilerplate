@@ -82,7 +82,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Unless required, do not select Hosting option and click Next
   - Copy the code in a ``config.txt`` file [This will be used later]
   - Click on Continue to Console
-  - From the panel on the right, Click on __Storage__
+  - From the panel on the left, Click on __Storage__
   - Now click on __Get Started__
   - Click Next 
   - Select a server closest to your location
