@@ -3,10 +3,10 @@ from firebase import Firebase
 def feedback_db(user_email, feedback):
     # Setting the Firebase configurations of the App
     config = {
-      "apiKey": "AIzaSyAfDTjozT0joQiP7UuE9WB_oiXDmEXKW-c",
-      "authDomain": "imgaiboilerplate.firebaseapp.com",
-      "databaseURL": "https://imgaiboilerplate.firebaseio.com",
-      "storageBucket": "imgaiboilerplate.appspot.com"
+    "apiKey": "apiKey",
+    "authDomain": "projectId.firebaseapp.com",
+    "databaseURL": "https://databaseName.firebaseio.com",
+    "storageBucket": "projectId.appspot.com"
     }
 
     firebase = Firebase(config)
