@@ -82,7 +82,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Unless required, do not select Hosting option and click Next
   - Copy the code in a ``config.txt`` file [This will be used later]
   - Click on Continue to Console
-  - From the panel on the right, Click on __Storage__
+  - From the panel on the left, Click on __Storage__
   - Now click on __Get Started__
   - Click Next 
   - Select a server closest to your location
@@ -92,12 +92,11 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Open the ```firebase_bro.py``` file
   - Update the config variable with the values previously stored inside the ``config.txt file`` [After this you can delete the ``config.txt`` file]
   - Save it
-
-  [__NOTE__:] If you are not using firebase please feel free to:
-    - remove the ``firebase_bro.py`` file,
-    - Delete the ``import firebase_bro`` line from the ``app.py`` file
-    - ``firebase_bro.send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
-    - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
+  - [__NOTE__:] If you are not using firebase please feel free to:
+      - remove the ``firebase_bro.py`` file,
+      - Delete the ``import firebase_bro`` line from the ``app.py`` file
+      - ``firebase_bro.send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
+      - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
 
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
 
