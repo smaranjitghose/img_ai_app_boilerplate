@@ -1,10 +1,11 @@
 import streamlit as st
 import tensorflow.keras
-from email_validator import validate_email
+from feedback_db import feedback_db
 from PIL import Image, ImageOps
 import numpy as np
 import time
 
+# Setting up Streamlit's page config
 st.beta_set_page_config(
 page_title = "Title of the webpage",
 layout = "centered",
@@ -94,6 +95,7 @@ def main():
         # Let's set the title of our About page
         st.title('About us')
 
+        # A function to display the company logo
         def display_logo(path):
             company_logo = Image.open(path)
             st.image(company_logo, width=350, use_column_width=False)
@@ -114,9 +116,11 @@ def main():
 
         # When User clicks the send feedback button
         if st.button('Send Feedback'):
-            # Checking if the email is valid
-            if validate_email(user_email):
-                st.success('The feedback has been shared.')
+            # Let's send the data to a Database to store it
+            feedback_db(user_email, feedback)
+
+            # Share a Successful Completion Message
+            st.success("Your feedback has been shared!")
 
 if __name__ == "__main__":
     main()
