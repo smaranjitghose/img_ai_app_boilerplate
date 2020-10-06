@@ -76,20 +76,15 @@ __NOTE: For now we are exclusively focused on image classification models built 
       ```
       __NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
 
-    - Now, go to [Heroku](http://heroku.com/).
-    - Log In. If you do not have an account please set it up [Tip: _Using GitHub to setup account makes things easier + you can make use of GitHub Education Pack if you are a student_]
-    - Open Your [Dashboard](https://dashboard.heroku.com/apps)
-    - Click on Create New App
-    - Give an appropiate name and click next
-    - Change the ```Deployment method``` to ```GitHub``` and connect your account
-    - Now, search for the repository you made and modified using this template
-    - Connect it
-    - Choose the branch. [Usually this would the master branch the first time and later you can have mutliple branches to choose from if you are experimenting with prototypes of different models trained for the same task]
-    __NOTE:__ Unless you have a CI like CircleCI setup on your repository and aware of how to do so. Please go for ```Manual Deploy``` option
-    - Click on ```Deploy Branch```
-    - Sit back and relax! Your entire app is being setup and will be served in a while
+      - Now as per your choice of hosting, please refer the following guides:
+        - [Heroku [Recommended for Beginners]](./Heroku_Guide.MD)
+        - [Google Cloud Platform](./GKE_Guide.MD)
+        - [Microsoft Azure](./Microsoft_Azure_Guide.MD)
+        - Amazon Web Services [Bean Stalk or EC2]
+        - Digital Ocean (__Comming Soon!__)
+        - Linode (__Comming Soon!__)
+        - Python Everywhere (__Comming Soon!__)
 
-    __NOTE:__ For the free tier, it is suggested that you use models that are small in size to avoid issues to the limited slug size Heroku Provides. Also avoid putting your Jupyter notebook files in the deployment branch to reduce the size of the assets of the app.
 
  
 ## Further Work 🏗
