@@ -14,7 +14,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
 
 - I assume you have Python(with Anaconda) installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/)
 - Now, that being done, please clone this repository for your local system and use this as template repo on your GitHub
-- After cloning the repo, move inside the repo 
+- After cloning the repo, move inside the repo
 
 ```cd ai_img_app_boilerplate ```
 
@@ -27,14 +27,14 @@ __NOTE: For now we are exclusively focused on image classification models built 
     - Open VSCode or your favourite editor and edit the file ```app.py```
 
          ``` code .```
-    - Search for ```labels``` in your code and set them as per your model training 
-    
+    - Search for ```labels``` in your code and set them as per your model training
+
        [say if you are are doing Cats Vs Dogs classification, then ```= {0: "Cats", 1: "Dogs"```]
 
        __NOTE: This is totally dependent on your model training__
-    
-    - Search for ```model``` and update the name of your model file. 
-    
+
+    - Search for ```model``` and update the name of your model file.
+
       [say ```model = tensorflow.keras.models.load_model('model/catsvsdogs.h5')```]
 
     - Search for ```st.title``` and update the Title of the app as per your application's needs
@@ -44,23 +44,23 @@ __NOTE: For now we are exclusively focused on image classification models built 
     - Now, let's do the same for our Page Title and tweak our SEO. Search for ```page_title``` and update it
 
       [say ```page_title="Cats Vs Dogs",```]
-    
+
     - If you have some affliation or maybe the app is made completely by you (perhaps with a group of your friends/collegeus) as a pet project, you can reflect that in the app by seaching for ```st.subheader``` and updating it
 
       [say ```st.subheader("By John Doe and Jane Doe")```]
 
     - __SOME UPDATION OF OUR CONTACT PAGE__
 
-    - You can add the name of you(and/or your teammates), profile picture,email and affliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affliation,email 
+    - You can add the name of you(and/or your teammates), profile picture,email and affliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affliation,email
     - For adding multiple contributors, you can call the same function multiple times.
-    [Say 
+    [Say
     ```python
     display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com"
     display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com"
     ```
     ]
-     
-    
+
+
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
 - Now, we are all set to test it. Open the terminal/command prompt and type ```streamlit run app.py```
 - Give it a few seconds to start our local server, load tensorflow and the other cool stuff and soon a window will pop up
@@ -78,15 +78,15 @@ __NOTE: For now we are exclusively focused on image classification models built 
 
       - Now as per your choice of hosting, please refer the following guides:
         - [Heroku [Recommended for Beginners]](./Heroku_Guide.MD)
-        - [Google Cloud Platform](./GKE_Guide.MD)
-        - [Microsoft Azure](./Microsoft_Azure_Guide.MD)
+        - [Google Cloud Platform](.Guides/GKE_Guide.MD)
+        - [Microsoft Azure](.Guides/Microsoft_Azure_Guide.MD)
         - Amazon Web Services [Bean Stalk or EC2]
         - Digital Ocean (__Comming Soon!__)
         - Linode (__Comming Soon!__)
         - Python Everywhere (__Comming Soon!__)
 
 
- 
+
 ## Further Work 🏗
 
 - [ ] Improve the UI of the app using custom HTML,CSS or REACT
@@ -107,4 +107,3 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - [ ] Dark Mode
 - [ ] Similar Efforts for a mobile app using TFLite + Flutter ( From building to serving)
 - [ ] Experiment with TFJS
-
