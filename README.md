@@ -93,11 +93,11 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Update the config variable with the values previously stored inside the ``config.txt file`` [After this you can delete the ``config.txt`` file]
   - Save it
 
-  [__NOTE__:] If you are not using firebase please feel free to:
-    - remove the ``send_img.py`` file,
-    - Delete the ``from send_img import send_img`` line from the ``app.py`` file
-    - ``send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
-    - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
+  - [__NOTE__:] If you are not using firebase please feel free to:
+        - remove the ``send_img.py`` file,
+        - Delete the ``from send_img import send_img`` line from the ``app.py`` file
+        - ``send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
+        - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
 
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
 
