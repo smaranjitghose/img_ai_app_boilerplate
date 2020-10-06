@@ -3,8 +3,8 @@ import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
 import time
-from send_img import send_img
 from img_classifier import our_image_classifier
+import firebase_bro
 
 st.beta_set_page_config(
 page_title="Title of the webpage",
@@ -33,6 +33,8 @@ def main():
             if uploaded_file is not None:
                 # Opening our image
                 image = Image.open(uploaded_file)
+                # Send our image to database for later analysis
+                firebase_bro.send_img(image)
                 # Let's see what we got
                 st.image(image,use_column_width=True)
                 st.write("")
