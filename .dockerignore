@@ -1,20 +1,18 @@
 __pycache__/*
-.azure-pipelines/
 # Information about our Git Repository
 .git/*
-# Our GitHub Repository's essentials: ReadMe, License, Code of Conduct
 README.MD
 LICENSE
 CODE_OF_CONDUCT.MD
+.gitignore
+Guides/*
 # Jupyter Notebook Related Stuff
 .ipynb_checkpoints/*
 notebooks/
 # VSCode config Log
 .vscode/*
-# Guides for Deployment
-GKE_GUIDE.MD
-Heroku_GUIDE.MD
-Microsoft_Azure_Guide.MD
+.DS_Store
 # Configuration Files for Heroku
 Procfile
 setup.sh
+.slugignore
