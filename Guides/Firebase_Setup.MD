@@ -51,11 +51,11 @@
 
 3. When you click the button, there will be a prompt to set the Security rules. It is recommended to start in **locked mode** so as to ensure security of the data.
 
-4. With this you have set up the **database successfully**. Now whenever a user writes a feedback, you can check it here in this database. Since this database stores data in terms of `JSON` files, you can also export the JSON file and use it in whichever way you like.
+4. With this you have set up the **Database successfully**. Now whenever a user writes a feedback, you can check it here in this database. Since this database stores data in terms of `JSON` files, you can also export the JSON file and use it in whichever way you like.
 
 ## Linking Firebase in the App
 Since everything is set up in the Firebase Console, the only thing left to do is to link the services to your app. You can do it this way:
-1. Open [`firebase_bro.py`](./firebase_bro.py).
+1. Open [`firebase_bro.py`](../firebase_bro.py).
 
 2. Remember the `config.txt` file which we created earlier? Open it up and copy the contents of `firebaseConfig` into `config` variable inside `firebase_bro.py`.
 
