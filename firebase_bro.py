@@ -1,6 +1,7 @@
 from firebase import Firebase
 
-# Setting up
+# Setting up Firebase configurations
+# To learn how to set it up, please go through Feedback.MD
 config = {
     "apiKey": "apiKey",
     "authDomain": "projectId.firebaseapp.com",
