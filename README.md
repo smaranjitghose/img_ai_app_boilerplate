@@ -26,7 +26,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - Time for some changes!. First let's tackle how our machine learning model works.
     - Open VSCode or your favorite code editor/IDE
 
-         `code`. [Type this in the terminal to open VSCode if you already have it installed]
+         `code .` [Type this in the terminal to open VSCode if you already have it installed]
 
     - Now open the file ```img_classifier.py```
     - Search for ```labels``` in the code and set them as per your model training
