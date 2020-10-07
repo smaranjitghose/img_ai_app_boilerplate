@@ -13,7 +13,7 @@
 
 9. Choose either automatic or manual deploy.
 
-    __NOTE:__ Unless you have a CI like CircleCI set up in your repository and are aware of how it works please go for `Manual Deploy` option.
+    __NOTE:__ Unless you have a CI like [CircleCI](https://circleci.com/) set up in your repository and are aware of how it works please go for `Manual Deploy` option.
 
 10. Click on `Deploy Branch`.
 
