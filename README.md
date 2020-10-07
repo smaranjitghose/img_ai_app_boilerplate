@@ -21,7 +21,7 @@ __NOTE: For now, we are exclusively focused on image classification models built
 
     `cd img_ai_app_boilerplate `
 
-- Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is the heart this app]
+- Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is at  the heart of this app]
 
     `pip install -r requirements.txt`
 
