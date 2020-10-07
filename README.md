@@ -14,29 +14,29 @@ __NOTE: For now we are exclusively focused on image classification models built 
 
 - I assume you have Python(with Anaconda) installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/)
 - Now, that being done, please clone this repository for your local system and use this as the template repo on your GitHub
-- After cloning the repo, move inside the repo 
+- After cloning the repo, move inside the repo
 
-```cd ai_img_app_boilerplate ```
+`cd img_ai_app_boilerplate `
 
 - Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is the heart this app]
 
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 - Now, let's put our model files in the app. Open the ```model``` sub-directory and paste your Keras h5 model files there
 - Time for some changes!. First let's tackle how our machine learning model works.
     - Open VSCode or your favorite code editor/IDE
 
-         ``` code .``` [Type this in the terminal to open VSCode if you already have it installed]
+         `code .` [Type this in the terminal to open VSCode if you already have it installed]
 
     - Now open the file ```img_classifier.py```
-    - Search for ```labels``` in the code and set them as per your model training 
-    
+    - Search for ```labels``` in the code and set them as per your model training
+
        [say if you are are doing Cats Vs Dogs classification, then ```= {0: "Cats", 1: "Dogs"```]
 
        __NOTE: This is totally dependent on your model training__
-    
-    - Search for ```model``` and update the name of your model file. 
-    
+
+    - Search for ```model``` and update the name of your model file.
+
       [say ```model = tensorflow.keras.models.load_model('model/catsvsdogs.h5')```]
 
     - Save the changes
@@ -52,22 +52,22 @@ __NOTE: For now we are exclusively focused on image classification models built 
     - Now, let's do the same for our Page Title and tweak our SEO. Search for ```page_title``` and update it
 
       [say ```page_title="Cats Vs Dogs",```]
-    
+
     - If you have some affiliation or maybe the app is made completely by you (perhaps with a group of your friends/colleageus) as a pet project, you can reflect that in the app by searching for ```st.subheader``` and updating it
 
       [say ```st.subheader("By John Doe and Jane Doe")```]
 
     - __SOME UPDATION OF OUR CONTACT PAGE__
 
-    - You can add the name of you(and/or your teammates), profile picture,email and affiliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affiliation,email 
+    - You can add the name of you(and/or your teammates), profile picture,email and affiliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affiliation,email
     - For adding multiple contributors, you can call the same function multiple times.
-    [Say 
+    [Say
     ```python
     display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com"
     display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com"
     ```
     ]
-     
+
 - [__Optional__] If you want to store your images in a cloud database like firebase, we have some more arrangements for you:
   - Open Your Web Browser
   - Visit Firebase [Console](https://console.firebase.google.com/)
@@ -84,7 +84,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
   - Click on Continue to Console
   - From the panel on the left, Click on __Storage__
   - Now click on __Get Started__
-  - Click Next 
+  - Click Next
   - Select a server closest to your location
   - Now click on the rules tab
   - Change the ``allow read, write: if request.auth != null;`` to `` allow read, write`` [Note this only for prototyping purposes. Refrain from doing this in a real-life scenario]
@@ -106,7 +106,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - __NOTE: If you face any difficulties please raise an issue and let me know__
 - Voila! You have your models deployed
 - [__Optional:__] If you wish to share this as a prototype for others to try, please follow these steps:
-    - Track,Commit and Push the changes to your GitHub repository that you initially made using this template repository
+    - Track, Commit and Push the changes to your GitHub repository that you initially made using this template repository
       ```
          git add .
          git commit -m "App v.0.0.1"
@@ -115,16 +115,16 @@ __NOTE: For now we are exclusively focused on image classification models built 
       __NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
 
       - Now as per your choice of hosting, please refer the following guides:
-        - [Heroku [Recommended for Beginners]](./Heroku_Guide.MD)
-        - [Google Cloud Platform](./GKE_Guide.MD)
-        - [Microsoft Azure](./Microsoft_Azure_Guide.MD)
+        - [Heroku (Recommended for Beginners)](./Guides/Heroku_Guide.MD)
+        - [Google Cloud Platform](./Guides/GKE_Guide.MD)
+        - [Microsoft Azure](./Guides/Microsoft_Azure_Guide.MD)
         - Amazon Web Services [Bean Stalk or EC2]
-        - Digital Ocean (__Comming Soon!__)
-        - Linode (__Comming Soon!__)
-        - Python Everywhere (__Comming Soon!__)
+        - Digital Ocean (__Coming Soon!__)
+        - Linode (__Coming Soon!__)
+        - Python Everywhere (__Coming Soon!__)
 
 
- 
+
 ## Further Work 🏗
 
 - [ ] Improve the UI of the app using custom HTML,CSS or REACT
@@ -145,4 +145,3 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - [ ] Dark Mode
 - [ ] Similar Efforts for a mobile app using TFLite + Flutter ( From building to serving)
 - [ ] Experiment with TFJS
-
