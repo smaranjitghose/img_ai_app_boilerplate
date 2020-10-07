@@ -1,13 +1,14 @@
 from firebase import Firebase
 
+# Setting up
 config = {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "projectId":  "",
-    "storageBucket": "",
+    "apiKey": "apiKey",
+    "authDomain": "projectId.firebaseapp.com",
+    "databaseURL": "https://databaseName.firebaseio.com",
+    "projectID": "ProjectID",
+    "storageBucket": "projectId.appspot.com",
     "messagingSenderId": "",
-    "appId":  "",
+    "appId": "",
     "measurementId": "",
 }
 
@@ -18,8 +19,8 @@ def firebase_gettin():
   Authentication for Firebase
   '''
   auth = firebase.auth()
-  email = ""
-  password = ""
+  email = "Enter your email here"
+  password = "Enter your password"
   try:
     auth.sign_in_with_email_and_password(email, password)
     print("Successfully Signed In")

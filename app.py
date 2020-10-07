@@ -1,6 +1,5 @@
 import streamlit as st
 import tensorflow.keras
-from feedback_db import feedback_db
 from PIL import Image, ImageOps
 import numpy as np
 import time
@@ -88,13 +87,15 @@ def main():
         # Let's set the feedback page complete with a form
         st.title("Feel free to share your opinions :smile:")
 
+        first_name = st.text_input('First Name:')
+        last_name = st.text_input('Last Name:')
         user_email = st.text_input('Enter Email: ')
         feedback = st.text_area('Feedback')
 
         # When User clicks the send feedback button
         if st.button('Send Feedback'):
             # Let's send the data to a Database to store it
-            feedback_db(user_email, feedback)
+            firebase_bro.send_feedback(first_name, last_name, user_email, feedback)
 
             # Share a Successful Completion Message
             st.success("Your feedback has been shared!")
