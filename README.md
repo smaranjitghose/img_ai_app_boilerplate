@@ -1,127 +1,132 @@
 <h1 align = "center">Image Classification App Boilerplate</h1>
 
-Have you been puzzled by tons of videos,blogs and other resources on the internet that want you to deploy your AI models?
+Have you been puzzled by tons of videos, blogs and other resources on the internet and don't know where and how to deploy your AI models?
 <p align = "center"><img src = "https://media.giphy.com/media/8mndEBLsg9Whg2Sduv/giphy.gif" width = 30%></p>
-Won't it be nice if you could have a template where you just put your trained model files, edit some promo text and Voila, it's done?
+
+Won't it be nice if you could have a template where you just insert your trained model files, edit some promo text and Voila, it's done?
 <p align = "center"><img src = "https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif" width = 25%></p>
+
 Well, look no further because this repository makes it as easy for you as it sounds!
 <p align = "center"><img src = "https://media.giphy.com/media/ohMtDzrhrWgnK/giphy.gif" width = 25%></p>
 
 ## How to use this?
 <p align = "center"><img src = "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif" width = 50%></p>
 
-__NOTE: For now we are exclusively focused on image classification models built using tensorflow/pytorch. Later we would expand to models dealing with text,speech data as well as training using MXNet or a julia environment__
+__NOTE: For now, we are exclusively focused on image classification models built using tensorflow/pytorch. Later we would expand to models dealing with text and speech data as well as training using MXNet or a julia environment__
 
-- I assume you have Python(with Anaconda) installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/)
-- Now, that being done, please clone this repository for your local system and use this as the template repo on your GitHub
-- After cloning the repo, move inside the repo
+- I assume you have *Python(with Anaconda)* installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/).
 
-`cd img_ai_app_boilerplate `
+- Now, once that is done, please clone this repository for your local system and use this as the template repo on your GitHub.
+- After cloning the repo, move inside the repo, using the command:
 
-- Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is the heart this app]
+    `cd img_ai_app_boilerplate `
 
-`pip install -r requirements.txt`
+- Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is at  the heart of this app]
 
-- Now, let's put our model files in the app. Open the ```model``` sub-directory and paste your Keras h5 model files there
-- Time for some changes!. First let's tackle how our machine learning model works.
-    - Open VSCode or your favorite code editor/IDE
+    `pip install -r requirements.txt`
 
-         `code .` [Type this in the terminal to open VSCode if you already have it installed]
+- Now, let's put our model files in the app. Open the `model` sub-directory and paste your `Keras h5` model files there.
 
-    - Now open the file ```img_classifier.py```
-    - Search for ```labels``` in the code and set them as per your model training
+### Integrating your Model
+1. Open VSCode or your favorite code editor/IDE.
 
-       [say if you are are doing Cats Vs Dogs classification, then ```= {0: "Cats", 1: "Dogs"```]
+    `code .` [Type this in the terminal to open VSCode if you already have it installed]
 
-       __NOTE: This is totally dependent on your model training__
+2. Now open the file [`img_classifier.py`](./img_classifier.py).
+3. Search for the variable `labels` in the code and set them as per your training model.
+    [say if you are doing Cats Vs Dogs classification, then `= {0: "Cats", 1: "Dogs"`]
 
-    - Search for ```model``` and update the name of your model file.
+    __NOTE: This is totally dependent on your model training__
 
-      [say ```model = tensorflow.keras.models.load_model('model/catsvsdogs.h5')```]
+4. Update `model` with the name of your model file.
 
-    - Save the changes
+    [say `model = tensorflow.keras.models.load_model('model/catsvsdogs.h5')`]
+5. Save the changes.
 
-- Continuing with changes to the User Interface or front of our app
+### Making changes in frontend
+Continuing with changes to the User Interface or the frontend of our app. Follow the steps mentioned below:
+1. Open [`app.py`](./app.py).
 
-    - Open the file ```img_classifier.py```
+2. Search for `st.title` and update the Title of the app as per your application's needs.
 
-    - Search for ```st.title``` and update the Title of the app as per your application's needs
+    [say `st.title('Our Cats vs Dogs Classifier')`]
 
-      [say ```st.title('Our Cats vs Dogs Classifier')```]
+3. Let's do the same for our *Page Title* and tweak our *SEO*. Search for `page_title` and update it.
 
-    - Now, let's do the same for our Page Title and tweak our SEO. Search for ```page_title``` and update it
+    [say `page_title="Cats Vs Dogs",`]
 
-      [say ```page_title="Cats Vs Dogs",```]
-
-    - If you have some affiliation or maybe the app is made completely by you (perhaps with a group of your friends/colleageus) as a pet project, you can reflect that in the app by searching for ```st.subheader``` and updating it
+4. If you have some affiliation or maybe the app is made completely by you (perhaps with a group of your friends/colleagues) as a pet project, you can reflect that in the app by searching for `st.subheader` and updating it
 
       [say ```st.subheader("By John Doe and Jane Doe")```]
 
-    - __SOME UPDATION OF OUR CONTACT PAGE__
+#### Updating our CONTACT PAGE
+ You can add your and/or your teammates' names, profile pictures, email and affiliation. You can do so by following the aforementioned steps.
+1. Search for `display_team` and pass/update the following parameters:
+    - **Name**
+    - **path_to_image**
+    - **Affiliation**
+    - **email**
 
-    - You can add the name of you(and/or your teammates), profile picture,email and affiliation. Search for ```display_team``` and pass/update the following parameters: Name, path_to_image,Affiliation,email
-    - For adding multiple contributors, you can call the same function multiple times.
-    [Say
+2. For adding multiple contributors, you can call the same function multiple times. For eg.:
+
     ```python
-    display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com"
-    display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com"
+    display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com")
+    display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com")
     ```
-    ]
 
-- [__Optional__] If you want to store your images in a cloud database like firebase, we have some more arrangements for you:
-  - Open Your Web Browser
-  - Visit Firebase [Console](https://console.firebase.google.com/)
-  - Log in or Switch to your desired Google Account
-  - Click on the ``+`` symbol to Add New Project
-  - Give a project name say ``your-project-name`` [Make sure it is not a name of some other firebase project your already have] and click Continue
-  - [__Unless you have lots of projects with Google Analytics__:] Keep it enabled and click on continue
-    - [__If you opted for Google Analytics__] Select your Google Analytics account
-  - Give it a few seconds to allocate the resources
-  - Now click on the icon to create a web app
-  - Give a name. [Preferrably the same name as your project name]
-  - Unless required, do not select Hosting option and click Next
-  - Copy the code in a ``config.txt`` file [This will be used later]
-  - Click on Continue to Console
-  - From the panel on the left, Click on __Storage__
-  - Now click on __Get Started__
-  - Click Next
-  - Select a server closest to your location
-  - Now click on the rules tab
-  - Change the ``allow read, write: if request.auth != null;`` to `` allow read, write`` [Note this only for prototyping purposes. Refrain from doing this in a real-life scenario]
-  - This basically allows us the upload and download the images without authenticating every time
-  - Open the ```firebase_bro.py``` file
-  - Update the config variable with the values previously stored inside the ``config.txt file`` [After this you can delete the ``config.txt`` file]
-  - Save it
-  - [__NOTE__:] If you are not using firebase please feel free to:
-      - remove the ``firebase_bro.py`` file,
-      - Delete the ``import firebase_bro`` line from the ``app.py`` file
-      - ``firebase_bro.send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
-      - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
+### Storing the Images and User Feedback Online (OPTIONAL)
+If you want to store your images and user feedbacks in a cloud database like [Firebase](https://firebase.google.com/), we have some arrangements for you! Follow the steps in [Firebase_Setup.MD](./Guides/Firebase_Setup.MD) to set it up.
 
-    __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
+ [__NOTE__:] If you are not using firebase please feel free to:
+- Remove the `firebase_bro.py` file,
 
-- Now, we are all set to test it. Open the terminal/command prompt and type ```streamlit run app.py```
-- Give it a few seconds to start our local server, load Tensorflow and the other cool stuff and soon a window will pop up
-- Upload Your Image, Click on Predict, Verify the working
-- __NOTE: If you face any difficulties please raise an issue and let me know__
-- Voila! You have your models deployed
-- [__Optional:__] If you wish to share this as a prototype for others to try, please follow these steps:
-    - Track, Commit and Push the changes to your GitHub repository that you initially made using this template repository
-      ```
-         git add .
-         git commit -m "App v.0.0.1"
-         git push origin master
-      ```
-      __NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
+- Delete the following lines from the `app.py` file:
+    - `import firebase_bro`.
 
-      - Now as per your choice of hosting, please refer the following guides:
-        - [Heroku (Recommended for Beginners)](./Guides/Heroku_Guide.MD)
-        - [Google Cloud Platform](./Guides/GKE_Guide.MD)
-        - [Microsoft Azure](./Guides/Microsoft_Azure_Guide.MD)
-        - Amazon Web Services [Bean Stalk or EC2]
-        - Digital Ocean (__Coming Soon!__)
-        - Linode (__Coming Soon!__)
-        - Python Everywhere (__Coming Soon!__)
+    - `firebase_bro.send_img(image)` line inside the `Home` block of the if else condition.
+
+    - `firebase_bro.send_feedback(first_name, last_name, user_email, feedback)` line inside the `Feedback` block of the if else condition.
+
+- Also remove `firebase` and all the lines below the comment `For Handling firebase and pyrebase dependency issues` in the [*requirements.txt*](./requirements.txt) file.
+
+__A FINAL NOTE: The current version of the app only supports jpg, png and jpeg images as input__
+
+### Testing the app Locally
+ Now, we are all set to test it!
+
+Open the terminal/command prompt and type
+```
+$ streamlit run app.py
+```
+Give it a few seconds to start our local server, load Tensorflow and other cool stuff our app requires in order to function properly..
+
+Upload Your Image, Click on Predict, Verify the working
+
+__NOTE:__ If you face any difficulties please raise an issue and let me know
+
+**Congrats! You now have your models deployed!**
+
+## Deploying the App (OPTIONAL)
+If you wish to share this as a prototype for others to try, please follow these steps:
+
+1. Track, Commit and Push the changes to your GitHub repository that you initially made using this template repository
+    ```
+    $ git add .
+    $ git commit -m "App v.0.0.1"
+    $ git push origin master
+    ```
+
+__NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
+
+Now as per your choice of hosting, please refer the following guides:
+
+- [Heroku (Recommended for Beginners)](./Guides/Heroku_Guide.MD)
+- [Google Cloud Platform](./Guides/GKE_Guide.MD)
+- [Microsoft Azure](./Guides/Microsoft_Azure_Guide.MD)
+- Amazon Web Services [Bean Stalk or EC2]
+- Digital Ocean (__Coming Soon!__)
+- Linode (__Coming Soon!__)
+- Python Everywhere (__Coming Soon!__)
 
 
 
@@ -134,10 +139,10 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - [ ] Guide for Deployment to AWS
 - [ ] Guide for Deployment to Azure
 - [ ] Add Favicon option, Improve SEO
-- [ ] Add Multiple Pages
-     - [ ] Contact Page
-     - [ ] About Page
-     - [ ] Feedback Page
+- [x] Add Multiple Pages
+     - [x] Contact Page
+     - [x] About Page
+     - [x] Feedback Page
 - [ ] Support for PyTorch models
 - [ ] Support for MXNET models
 - [ ] Support for saved_model TF format
