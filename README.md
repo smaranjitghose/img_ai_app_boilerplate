@@ -16,17 +16,17 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - Now, that being done, please clone this repository for your local system and use this as the template repo on your GitHub
 - After cloning the repo, move inside the repo
 
-```cd ai_img_app_boilerplate ```
+`cd img_ai_app_boilerplate `
 
 - Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is the heart this app]
 
-```pip install -r requirements.txt```
+`pip install -r requirements.txt`
 
 - Now, let's put our model files in the app. Open the ```model``` sub-directory and paste your Keras h5 model files there
 - Time for some changes!. First let's tackle how our machine learning model works.
     - Open VSCode or your favorite code editor/IDE
 
-         ``` code .``` [Type this in the terminal to open VSCode if you already have it installed]
+         `code`. [Type this in the terminal to open VSCode if you already have it installed]
 
     - Now open the file ```img_classifier.py```
     - Search for ```labels``` in the code and set them as per your model training
@@ -106,7 +106,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
 - __NOTE: If you face any difficulties please raise an issue and let me know__
 - Voila! You have your models deployed
 - [__Optional:__] If you wish to share this as a prototype for others to try, please follow these steps:
-    - Track,Commit and Push the changes to your GitHub repository that you initially made using this template repository
+    - Track, Commit and Push the changes to your GitHub repository that you initially made using this template repository
       ```
          git add .
          git commit -m "App v.0.0.1"
@@ -115,13 +115,13 @@ __NOTE: For now we are exclusively focused on image classification models built 
       __NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
 
       - Now as per your choice of hosting, please refer the following guides:
-        - [Heroku [Recommended for Beginners]](./Heroku_Guide.MD)
-        - [Google Cloud Platform](.Guides/GKE_Guide.MD)
-        - [Microsoft Azure](.Guides/Microsoft_Azure_Guide.MD)
+        - [Heroku (Recommended for Beginners)](./Guides/Heroku_Guide.MD)
+        - [Google Cloud Platform](./Guides/GKE_Guide.MD)
+        - [Microsoft Azure](./Guides/Microsoft_Azure_Guide.MD)
         - Amazon Web Services [Bean Stalk or EC2]
-        - Digital Ocean (__Comming Soon!__)
-        - Linode (__Comming Soon!__)
-        - Python Everywhere (__Comming Soon!__)
+        - Digital Ocean (__Coming Soon!__)
+        - Linode (__Coming Soon!__)
+        - Python Everywhere (__Coming Soon!__)
 
 
 
