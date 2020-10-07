@@ -20,8 +20,10 @@ def firebase_gettin():
   Authentication for Firebase
   '''
   auth = firebase.auth()
+
   email = "Enter your email here"
   password = "Enter your password"
+
   try:
     auth.sign_in_with_email_and_password(email, password)
     print("Successfully Signed In")

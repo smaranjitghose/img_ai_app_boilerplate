@@ -96,7 +96,7 @@ __NOTE: For now we are exclusively focused on image classification models built 
       - remove the ``firebase_bro.py`` file,
       - Delete the ``import firebase_bro`` line from the ``app.py`` file
       - ``firebase_bro.send_img(image)`` line inside the ``Home`` function of the ``app.py`` file
-      - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file
+      - remove ``firebase`` and all the lines below the comment `` For Handling firebase and pyrebase dependency issues`` in the requirements.txt file 
 
     __A FINAL NOTE: The current version of the app only supports jpg,png and jpeg images as input__
 
