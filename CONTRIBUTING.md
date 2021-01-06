@@ -24,7 +24,7 @@ If you wish to contribute to this project, please raise an issue and wait for th
 git clone --depth 1 https://github.com/<your_user_name>/img_ai_app_boilerplate.git
 ```
 
-<img src="assets/images/clone.png" width="500">
+<img src="assets/Readme_Assets/clone.png" width="500">
 
 **3.** Navigate to the project directory :file_folder: .
 
@@ -58,7 +58,7 @@ git checkout -b <your_branch_name>
 
 **8.** Perform your desired changes to the code base.
 
-<p align="center"><img width=35% src="https://media2.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47pzi2rpig0vc8pjusra8hiai1b91zgiywvbubu9vu&rid=giphy.gif"></p>
+<p align="center"><img width=35% src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif"></p>
 
 **9.** Track your changes:heavy_check_mark: .
 
@@ -80,14 +80,14 @@ git push -u origin <your_branch_name>
 
 **12.** To create a pull request, click on `compare and pull requests`. Please ensure you compare your feature branch to the desired branch of the repo you are suppose to make a PR to.
 
-<img src="./assets/Readme_Assets/ComparePR.png" width=600>
+<img src="assets/Readme_Assets/compareandpull.png" width=600>
 
 **13.** Then add an appropriate title and description to your pull request that explains your changes and efforts done.
 
 **14.** Click on `Create Pull Request`.
 
-<img src="./assets/Readme_Assets/CreatePR.png" width=600>
+<img src="assets/Readme_Assets/createpull.png" width=600>
 
-**15** Voila :exclamation: You have made a PR to the awesome-developer-portfolio project :boom: . Sit back patiently and relax while the project maintainers review your PR. Please understand at times the time can vary from a few hours to a few days
+**15** Voila :exclamation: You have made a PR to the img_ai_app_boilerplate project :boom: . Sit back patiently and relax while the project maintainers review your PR. Please understand at times the time can vary from a few hours to a few days
 
 <p align="center"><img src="https://media.giphy.com/media/ftMKOEsgL2ALMks8by/giphy.gif" width=35%></p>
