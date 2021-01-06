@@ -14,7 +14,7 @@ If you wish to contribute to this project, please raise an issue and wait for th
 
 <h2 align="center"><b>How to make a Pull Request? 👇</b></h2>
 
-<p align="center"><img src="https://media.giphy.com/media/f6z5TkrTIBZILYOd1t/giphy.gif" width=500></p>
+<p align="center"><img src="https://media.giphy.com/media/3o6gaQc4a0hghj1T2w/giphy.gif" width=500></p>
 
 **1.** Fork [this](https://github.com/smaranjitghose/img_ai_app_boilerplate) repository.
 
