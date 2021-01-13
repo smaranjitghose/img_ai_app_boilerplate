@@ -1,3 +1,4 @@
+![](assets/party.gif)
 <h1 align = "center">Image Classification App Boilerplate</h1>
 
 Have you been puzzled by tons of videos, blogs and other resources on the internet and don't know where and how to deploy your AI models?
