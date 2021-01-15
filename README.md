@@ -34,7 +34,7 @@ __NOTE: For now, we are exclusively focused on image classification models built
 
 2. Now open the file [`img_classifier.py`](./img_classifier.py).
 3. Search for the variable `labels` in the code and set them as per your training model.
-    [say if you are doing Cats Vs Dogs classification, then `= {0: "Cats", 1: "Dogs"`]
+    [say if you are doing Cats Vs Dogs classification, then `= {0: "Cats", 1: "Dogs"`}
 
     __NOTE: This is totally dependent on your model training__
 
