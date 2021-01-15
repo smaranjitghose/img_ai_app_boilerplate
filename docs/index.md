@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+<h1 align = "center">Image🖼 Classification App Boilerplate</h1>
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Have you been puzzled by tons of videos, blogs and other resources on the internet and don't know where and how to deploy your AI models?
+<p align = "center"><img src = "https://media.giphy.com/media/8mndEBLsg9Whg2Sduv/giphy.gif" width = 30%></p>
 
-## Commands
+Won't it be nice if you could have a template where you just insert your trained model files, edit some promo text and Voila, it's done.
+<p align = "center"><img src = "https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif" width = 25%></p>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Well, look no further because this repository makes it as easy for you as it sounds!
+<p align = "center"><img src = "https://media.giphy.com/media/ohMtDzrhrWgnK/giphy.gif" width = 25%></p>

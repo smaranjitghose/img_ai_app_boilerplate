@@ -3,7 +3,7 @@ repo_url: https://github.com/smaranjitghose/img_ai_app_boilerplate
 
 nav:
     - Home: index.md
-    - Manual: manual.md
+    - Getting Started: getting_started.md
 
 theme: 
     name: 'material'
