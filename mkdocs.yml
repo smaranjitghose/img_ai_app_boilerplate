@@ -9,7 +9,8 @@ nav:
     - Online Data Storage: firebase.md
     - Testing: testing.md 
     - Deployment: deployment.md
-    
+    - Hosting: hosting.md
+
 
 theme: 
     name: 'material'
