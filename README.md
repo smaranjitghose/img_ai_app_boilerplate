@@ -9,41 +9,89 @@ Won't it be nice if you could have a template where you just insert your trained
 Well, look no further because this repository makes it as easy for you as it sounds!
 <p align = "center"><img src = "https://media.giphy.com/media/ohMtDzrhrWgnK/giphy.gif" width = 25%></p>
 
-## How to use this?
-<p align = "center"><img src = "https://media.giphy.com/media/26AHPxxnSw1L9T1rW/giphy.gif" width = 50%></p>
+# How to use this project?🤔🤔:
+<p align = "center"><img src = "https://media.giphy.com/media/Ln2dAW9oycjgmTpjX9/giphy.gif" width = 50%></p>
 
 __NOTE: For now, we are exclusively focused on image classification models built using tensorflow/pytorch. Later we would expand to models dealing with text and speech data as well as training using MXNet or a julia environment__
 
-- I assume you have *Python(with Anaconda)* installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/).
+- I assume you have *Python(with Anaconda)* installed in your operating system and set to path. If not, please visit [this](https://docs.anaconda.com/anaconda/install/). Using GIT along with Python is highly recommended for version control and deployment
 
-- Now, once that is done, please clone this repository for your local system and use this as the template repo on your GitHub.
-- After cloning the repo, move inside the repo, using the command:
 
-    `cd img_ai_app_boilerplate `
+## A. Fetching our template and setting it up:
 
-- Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is at  the heart of this app]
+<p align = "center"><img src = "https://media.giphy.com/media/3o72F7RrTPW6jymXew/giphy.gif" width = 50%></p>
 
-    `pip install -r requirements.txt`
 
-- Now, let's put our model files in the app. Open the `model` sub-directory and paste your `Keras h5` model files there.
+1. Open GitHub
 
-### Integrating your Model
-1. Open VSCode or your favorite code editor/IDE.
+2. Log in with your credentials. [ Create an account if you have not done it already]
+
+3. Open the terminal/command prompt on your system
+
+4. Move to a suitable location where you want to keep the project files locally
+
+Example: `cd Desktop/projects`
+
+5. Clone [this](https://github.com/smaranjitghose/img_ai_app_boilerplate) repository.
+
+```
+git clone --depth 1 https://github.com/smaranjitghose/img_ai_app_boilerplate.git
+```
+
+6. Navigate inside your cloned copy of the template
+
+```
+cd img_ai_app_boilerplate
+```
+
+7. Now, let's fetch our dependencies to run our app. [A python package called [StreamLit](https://docs.streamlit.io/en/stable/) is at  the heart of this app]
+
+```
+ pip install -r requirements.txt
+```
+
+8. Now, let's put our model files inside in the app. .
+
+
+## B. Integrating our Trained Model:
+
+<p align = "center"><img src = "https://media.giphy.com/media/9VfMSBNUmELTi/giphy.gif" width = 40%></p>
+
+
+
+1. Open the `model` sub-directory 
+
+```
+cd model
+start .
+```
+
+2. Paste your `Keras.h5` model files there
+
+3. Shoot up your favorite code editor/IDE (I prefer VSCode).
 
     `code .` [Type this in the terminal to open VSCode if you already have it installed]
 
-2. Now open the file [`img_classifier.py`](./img_classifier.py).
-3. Search for the variable `labels` in the code and set them as per your training model.
-    [say if you are doing Cats Vs Dogs classification, then `= {0: "Cats", 1: "Dogs"`]
+4. Now open the file [`img_classifier.py`](./img_classifier.py).
+
+5. Search for the variable `labels` in the code and set its' value as per the labels of the dataset used for training your model.
+    [say if you are doing Cats Vs Dogs classification, then `labels = {0: "Cats", 1: "Dogs"}` ]
 
     __NOTE: This is totally dependent on your model training__
 
-4. Update `model` with the name of your model file.
+6. Update the value of the variable `model` with the path of your model file.
 
     [say `model = tensorflow.keras.models.load_model('model/catsvsdogs.h5')`]
-5. Save the changes.
+    
+7. Save the changes.
 
-### Making changes in frontend
+## C. Frontend and Content Changes
+
+<p align = "center"><img src = "https://media.giphy.com/media/3o72F2vvc71VgmlvgI/giphy.gif" width = 50%></p>
+
+
+#### Home Page
+
 Continuing with changes to the User Interface or the frontend of our app. Follow the steps mentioned below:
 1. Open [`app.py`](./app.py).
 
@@ -51,7 +99,7 @@ Continuing with changes to the User Interface or the frontend of our app. Follow
 
     [say `st.title('Our Cats vs Dogs Classifier')`]
 
-3. Let's do the same for our *Page Title* and tweak our *SEO*. Search for `page_title` and update it.
+3. Now search for variable `page_title` and update it with the same. This will tweak the *SEO*. 
 
     [say `page_title="Cats Vs Dogs",`]
 
@@ -59,25 +107,31 @@ Continuing with changes to the User Interface or the frontend of our app. Follow
 
       [say ```st.subheader("By John Doe and Jane Doe")```]
 
-#### Updating our CONTACT PAGE
- You can add your and/or your teammates' names, profile pictures, email and affiliation. You can do so by following the aforementioned steps.
-1. Search for `display_team` and pass/update the following parameters:
+
+__^^ Delete any or all code that you won't use from the above__
+
+#### Contact Page🤳
+
+1. Search for the function call `display_team("Your Awesome Name", "./assets/profile_pic.png","Your Awesome Affliation","hello@youareawesome.com"` and update the following parameters as per your own discretion:
+
     - **Name**
-    - **path_to_image**
+    - **path_to_image** (I would suggest storing the images inside `assets/images/`
     - **Affiliation**
     - **email**
 
-2. For adding multiple contributors, you can call the same function multiple times. For eg.:
+2. For adding multiple members, you can call the same function multiple times. For eg.:
 
     ```python
     display_team("John Doe","./assets/john_doe.png","Stanford University","contact@johndoe.com")
     display_team("Jane Doe","./assets/jane_doe.png","Harvard University","contact@janedoe.com")
     ```
 
-### Storing the Images and User Feedback Online (OPTIONAL)
+## D. Storing the Images📤 and User Feedback Online (OPTIONAL)
+
 If you want to store your images and user feedbacks in a cloud database like [Firebase](https://firebase.google.com/), we have some arrangements for you! Follow the steps in [Firebase_Setup.MD](./Guides/Firebase_Setup.MD) to set it up.
 
- [__NOTE__:] If you are not using firebase please feel free to:
+ [__NOTE__:] If you do not want to use firebase Please feel free to:
+ 
 - Remove the `firebase_bro.py` file,
 
 - Delete the following lines from the `app.py` file:
@@ -91,46 +145,130 @@ If you want to store your images and user feedbacks in a cloud database like [Fi
 
 __A FINAL NOTE: The current version of the app only supports jpg, png and jpeg images as input__
 
-### Testing the app Locally
- Now, we are all set to test it!
+## E. Testing🧪 the app Locally
 
-Open the terminal/command prompt and type
+
+<p align = "center"><img src = "https://media.giphy.com/media/3ohhworAhxSEHT3zDa/giphy.gif" width = 50%></p>
+
+- Now, we are all set to test your prototype!
+
+- Open the terminal/command prompt and type
 ```
 $ streamlit run app.py
 ```
-Give it a few seconds to start our local server, load Tensorflow and other cool stuff our app requires in order to function properly..
 
-Upload Your Image, Click on Predict, Verify the working
+- Give it a few seconds to start on your local server, load Tensorflow and other cool stuff the app requires in order to function properly.
+
+- Upload Your Image, Click on Predict, Verify the working
 
 __NOTE:__ If you face any difficulties please raise an issue and let me know
 
-**Congrats! You now have your models deployed!**
+**Congrats! You have successfully deployed your models**
 
-## Deploying the App (OPTIONAL)
-If you wish to share this as a prototype for others to try, please follow these steps:
+<p align = "center"><img src = "https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif" width = 50%></p>
 
-1. Track, Commit and Push the changes to your GitHub repository that you initially made using this template repository
-    ```
-    $ git add .
-    $ git commit -m "App v.0.0.1"
-    $ git push origin master
-    ```
+## F. Hosting the App 🚛 
 
-__NOTE: You must be inside the folder containing the app to send the update your copy on GitHub__
+<p align = "center"><img src = "https://media.giphy.com/media/L2HCO7avkR5H9MvS9Y/giphy.gif" width = 50%></p>
+
+If you wish to share this as a prototype for others to try or showcase it to your friends and collegeues, please follow these steps:
+
+#### Pushing the code to GitHub
+
+1. Create a new github repository with an approriate name say my ``my_app`` ( DO NOT ADD LICENSE, README, CODE OF CONDUCT, GITIGNORE files at this moment)
+
+**Depending upon your preference, you can make the repository private or public**
+
+2. Open the Terminal/Command Prompt once again
+
+3. Make new folder having the same name as the github repository name
+
+```
+mkdir my_app
+```
+
+4. Now let's copy all the files of the folder containing our prototype to this folder
+
+```
+cp -a ./img_ai_app_boilerplate/. ./my_app/
+```
+
+5. Navigate to the location of the above newly created directory
+
+``
+cd my_app
+``
+
+6.  After copying, please feel free to remove the documentation related files that are unnecessary for your prototype
+
+
+```
+rm -r Guides\
+rm LICSENSE CODE_OF_CONDUCT.md CONTRIBUTING.md README.MD
+```
+
+]
+
+7. Intiatilize the directory as a git repository
+
+```
+git init
+```
+
+8. Set remote to your repository on GitHub( Copy the link of the repository from the Address Bar)
+
+```
+git remote add origin https://github.com/your_github_username/my_app.git 
+```
+
+
+9. Track and commit the current changes
+
+```
+git add .
+git commit -m "v.0.0.1"
+```
+
+10. Push the changes to your remote repository on GitHub
+
+```
+git push origin main
+```
+
+11. Once successsfull, close the terminal. 
+
+12. Go to GitHub and locate the repository to check if the changes are reflected
+
+13. Now Add your own custom:
+    - README.MD file (To descibe your project in brief)
+    - LICENSE file (This depends upon you. I prefer going with MIT License for my open source repositories)
+    - CODE_OF_CONDUCT.MD ( GitHub already provides a template for this)
+    - Short Repository Description on the right
+    - Relevant Tags
+    
+    
+#### Hosting using a cloud service ☁:    
 
 Now as per your choice of hosting, please refer the following guides:
 
 - [Heroku (Recommended for Beginners)](./Guides/Heroku_Guide.MD)
 - [Google Cloud Platform](./Guides/GKE_Guide.MD)
 - [Microsoft Azure](./Guides/Microsoft_Azure_Guide.MD)
-- Amazon Web Services [Bean Stalk or EC2]
+- Amazon Web Services [Bean Stalk or EC2] (__Coming Soon!__)
 - Digital Ocean (__Coming Soon!__)
 - Linode (__Coming Soon!__)
 - Python Everywhere (__Coming Soon!__)
 
 
+# Code of Conduct
+<p align="center"><img width=35% src="https://media.giphy.com/media/qHRwTyhWIj4UU/200w_d.gif"></p>
 
-## Further Work 🏗
+# License 
+<p align="center"><img width=35% src="https://media.giphy.com/media/xUPGcJGy8I928yIlAQ/giphy.gif"></p>
+
+# If this project helped you, do give it a 🌟 on GitHub and share your work over LinkedIN and/or Twitter by tagging me!
+
+# Further Work 🏗
 
 - [ ] Improve the UI of the app using custom HTML,CSS or REACT
 - [ ] Make the App more descriptive
