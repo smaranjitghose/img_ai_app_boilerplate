@@ -7,8 +7,8 @@ nav:
 
 theme: 
     name: 'material'
-    logo: 'images/icons/logo.png'
-    favicon: 'images/icons/logo.png'
+    logo: 'images/favicon.png'
+    favicon: 'images/favicon.png'
     palette:
         scheme: slate
         primary: deep purple
@@ -27,3 +27,6 @@ google_analytics:
 
 markdown_extensions:
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
