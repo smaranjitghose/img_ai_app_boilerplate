@@ -57,3 +57,107 @@ __NOTE:__ For the free tier, it is suggested that you use models that are small 
 
 #### References
 1. [My slug size is too large. How can I make it smaller?](https://help.heroku.com/KUFMEES1/my-slug-size-is-too-large-how-can-i-make-it-smaller)
+
+
+## Google Kubernetes Engine
+
+- Log in to Your preferred Google Account and Open Your [Google Cloud Console](https://console.cloud.google.com/)
+
+- Search for Manage Resources
+
+- Click on create New Project
+
+- Give a suitable Project Name (say your-project-name)
+
+- Open Google Cloud Console from the top right 
+
+- Fetch our source code using git
+
+```
+git clone  https://github.com/yourusername/your-project-repo-name.git 
+```
+
+- Checking what we got
+
+```
+ls -aH 
+```
+
+- Navigating to the directory that contains our source code
+
+```
+cd your-project-repo-name
+```
+
+- Setting Project ID Environment Variable
+
+```
+export PROJECT_ID=export PROJECT_ID=your-project-name
+```
+
+- Now let's build our docker image and tag it for uploading
+
+ ```
+ docker build -t gcr.io/${PROJECT_ID}/insurance-streamlit:v1
+ ```
+
+- Checking what we got
+
+```
+docker images
+```
+
+- Ensure Google Cloud [Container Registry](https://cloud.google.com/container-registry) is enabled
+
+- Authenticate Google Container Registry
+
+```
+gcloud auth configure-docker
+```
+
+- Let's upload our Docker Image to Google Cloud Container Registry
+
+```
+docker push gcr.io/${PROJECT_ID}/insurance-streamlit:v1
+```
+
+- Set up the project ID and Compute Engine Zone for gcloud tool
+
+
+```
+gcloud config set project $PROJECT_ID 
+gcloud config set compute/zone us-central1
+```
+
+
+- Create a Kubernetes Cluster
+
+```
+gcloud container clusters create streamlit-cluster --num-nodes=2
+```
+
+- Use Kubernetes Cluster Management System to deploy our app replicas and schedule them to run on nodes in the cluster
+
+```
+kubectl create deployment insurance-streamlit --image=gcr.io/${PROJECT_ID}/insurance-streamlit:v1
+```
+
+- Expose the app to Internet traffic by creating an external IP and a Load Balancer
+
+```
+kubectl expose deployment insurance-streamlit --type=LoadBalancer --port 80 --target-port 8501
+```
+
+- Checking our app
+
+```
+kubectl get service
+```
+
+- Set up a DNS***
+
+- Scale up the application by adding additional pods, or delete the Service and container cluster to avoid incurring unwanted charge***
+
+*** Will be covered later
+
+
