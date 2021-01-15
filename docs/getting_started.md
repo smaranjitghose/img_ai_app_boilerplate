@@ -1,4 +1,4 @@
-#  Fetching our template and setting it up:
+# A.  Fetching our template and setting it up:
 
 <p align = "center"><img src = "https://media.giphy.com/media/Ln2dAW9oycjgmTpjX9/giphy.gif" width = 50%></p>
 

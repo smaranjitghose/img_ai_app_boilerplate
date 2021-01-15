@@ -4,6 +4,7 @@ repo_url: https://github.com/smaranjitghose/img_ai_app_boilerplate
 nav:
     - Home: index.md
     - Getting Started: getting_started.md
+    - Model Integration: model_integration.md
 
 theme: 
     name: 'material'

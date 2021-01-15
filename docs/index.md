@@ -1,5 +1,4 @@
-<h1 align = "center">Image🖼 Classification App Boilerplate</h1>
-
+#Image🖼 Classification App Boilerplate
 Have you been puzzled by tons of videos, blogs and other resources on the internet and don't know where and how to deploy your AI models?
 <p align = "center"><img src = "https://media.giphy.com/media/8mndEBLsg9Whg2Sduv/giphy.gif" width = 30%></p>
 
