@@ -1,4 +1,4 @@
-# C. Frontend and Content Changes
+# Frontend and Content Changes
 
 <p align = "center"><img src = "https://media.giphy.com/media/3o72F2vvc71VgmlvgI/giphy.gif" width = 50%></p>
 

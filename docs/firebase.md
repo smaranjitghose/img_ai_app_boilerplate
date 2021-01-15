@@ -1,6 +1,6 @@
 # D. Storing the Images📤 and User Feedback Online 
 
-## Setting up Firebase:
+## Setting up Firebase
 
 - Login in to **[Firebase](https://firebase.google.com/)**, using your *Gmail ID*.
 

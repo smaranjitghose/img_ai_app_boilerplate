@@ -1,4 +1,4 @@
-# B. Integrating our Trained Model:
+# Integrating our Trained Model:
 
 <p align = "center"><img src = "https://media.giphy.com/media/9VfMSBNUmELTi/giphy.gif" width = 40%></p>
 
