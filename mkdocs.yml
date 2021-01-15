@@ -7,7 +7,9 @@ nav:
     - Model Integration: model_integration.md
     - Frontend Chages: frontend.md
     - Online Data Storage: firebase.md
-    - Testing: testing.md
+    - Testing: testing.md 
+    - Deployment: deployment.md
+    
 
 theme: 
     name: 'material'
