@@ -5,6 +5,7 @@ nav:
     - Home: index.md
     - Getting Started: getting_started.md
     - Model Integration: model_integration.md
+    - Frontend Chages: frontend.md
 
 theme: 
     name: 'material'
