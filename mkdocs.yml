@@ -1,0 +1,50 @@
+site_name : Img AI App
+
+# theme: readthedocs
+theme:
+  name : material
+
+nav:
+  - Home Page : 'index.md'
+  - Open Source :
+    - Programs we are part of :
+      - info : '#'
+      - about : '#'
+      - SLOP : '#'
+      - SWOC : '#'
+      - DWOC : '#'
+
+    - Contribution Guide : 'CONTRIBUTING.md'
+    - Code of Conduct : 'CODE_OF_CONDUCT.md'
+    - License : '#'
+
+
+  - Getting Started :
+    -  Using this repo as a template on GitHub : '#'
+    - Getting the source code locally : '#'
+    - Model Integration : '#'
+    - Updating Model Files : '#'
+    - Updating the Image Classifier Script : '#'
+    - Front End Changes : '#'
+    - Home Page [ Of the app] - : '#'
+    - Team Page : '#'
+    - About Page : '#'
+    - Firebase and more Pages! : '#'
+    - Setup Firebase for the project : 'Guides/Firebase_Setup.md'
+    - Store Configuration Files to reference Firebase Project : '#'
+    - Setup Real time database for the project : '#'
+    - Update the Contact Page : '#'
+    - Setup Cloud Storage for the project : '#'
+    - Update the function to send images : '#'
+    - Remove Firebase(If not required) : '#'
+
+  - Deploment :
+    - Staging, Commiting and Pushing Changes to GitHub : '#'
+    - Cloud Services : '#'
+    - Heroku : 'Guides/Heroku_Guide.md'
+    - Google Cloud Services : 'Guides/GKE_Guide.md'
+    - Amazon Web Services : 'Guides/AWS_EC2_Guide.md'
+    - Microsoft Azure : 'Guides/Microsoft_Azure_Guide.md'
+    - Digital Ocean : 'Guides/Digital_Ocean.md'
+    - Linode : '#'
+    - Python Everywhere : '#'
