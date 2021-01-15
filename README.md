@@ -1,9 +1,9 @@
-<h1 align = "center">Image Classification App Boilerplate</h1>
+<h1 align = "center">Image🖼 Classification App Boilerplate</h1>
 
 Have you been puzzled by tons of videos, blogs and other resources on the internet and don't know where and how to deploy your AI models?
 <p align = "center"><img src = "https://media.giphy.com/media/8mndEBLsg9Whg2Sduv/giphy.gif" width = 30%></p>
 
-Won't it be nice if you could have a template where you just insert your trained model files, edit some promo text and Voila, it's done?
+Won't it be nice if you could have a template where you just insert your trained model files, edit some promo text and Voila, it's done.
 <p align = "center"><img src = "https://media.giphy.com/media/3NtY188QaxDdC/giphy.gif" width = 25%></p>
 
 Well, look no further because this repository makes it as easy for you as it sounds!
@@ -205,9 +205,9 @@ cd my_app
 ```
 rm -r Guides\
 rm LICSENSE CODE_OF_CONDUCT.md CONTRIBUTING.md README.MD
+rm -r assets\readme_assets\
 ```
 
-]
 
 7. Intiatilize the directory as a git repository
 
@@ -260,15 +260,14 @@ Now as per your choice of hosting, please refer the following guides:
 - Python Everywhere (__Coming Soon!__)
 
 
-# Code of Conduct
-<p align="center"><img width=35% src="https://media.giphy.com/media/qHRwTyhWIj4UU/200w_d.gif"></p>
+# [Code of Conduct](./CODE_OF_CONDUCT.MD)
+<p align="center"><img width=35% src="https://media.giphy.com/media/yc2T1xcXXRwpcAfFLm/giphy.gif"></p>
 
-# License 
-<p align="center"><img width=35% src="https://media.giphy.com/media/xUPGcJGy8I928yIlAQ/giphy.gif"></p>
+# [License](./LICENSE) 
+<p align="center"><img width=35% src="https://media.giphy.com/media/2ijAt1xl4zQ3PGYr7A/giphy.gif"></p>
 
-# If this project helped you, do give it a 🌟 on GitHub and share your work over LinkedIN and/or Twitter by tagging me!
 
-# Further Work 🏗
+# Future Work 🏗
 
 - [ ] Improve the UI of the app using custom HTML,CSS or REACT
 - [ ] Make the App more descriptive
@@ -288,3 +287,6 @@ Now as per your choice of hosting, please refer the following guides:
 - [ ] Dark Mode
 - [ ] Similar Efforts for a mobile app using TFLite + Flutter ( From building to serving)
 - [ ] Experiment with TFJS
+
+
+# If this project helped you, do give it a 🌟 on GitHub and share your work over LinkedIN and/or Twitter by tagging me!
