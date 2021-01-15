@@ -1,0 +1,29 @@
+site_name: Image Classification App Boilerplate
+repo_url: https://github.com/smaranjitghose/img_ai_app_boilerplate
+
+nav:
+    - Home: index.md
+    - Manual: manual.md
+
+theme: 
+    name: 'material'
+    logo: 'images/icons/logo.png'
+    favicon: 'images/icons/logo.png'
+    palette:
+        scheme: slate
+        primary: deep purple
+    font:
+        text: Poppins
+    features:
+        - navigation.expand
+        - searcn.highlight
+
+plugins:
+  - search
+
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+
+markdown_extensions:
+  - attr_list
