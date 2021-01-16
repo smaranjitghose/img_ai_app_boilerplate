@@ -161,7 +161,7 @@ kubectl get service
 *** Will be covered later
 
 
-## Amazon WC2
+## Amazon EC2
 
 - Visit [AWS Portal](https://aws.amazon.com/free/).
 
