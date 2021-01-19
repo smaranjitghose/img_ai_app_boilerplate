@@ -219,12 +219,12 @@ For more details refer [this]( https://docs.aws.amazon.com/awsaccountbilling/lat
 
 1. Your key must not be publicly viewable for SSH to work. Use this command:
 
-``` console
+```
 chmod 400 img_ai_app_streamlit.pem
 ```
 2. Then, connect to your instance using its Public DNS:
 
-``` console
+```
 ssh i img_ai_app_streamlit.pem ec2-user@your_public_dns_address
 ```
 
@@ -240,8 +240,8 @@ Now we are in our AWS EC2 Instance.
 
 - The next step is to install python and all the necessary libraries for your app.
 
-```console
-sudo yum install python3 git
+```
+sudo apt-get install python3 git
 ```
 
 - After these two installation we can use git to get our app within our instance.<br>
@@ -249,31 +249,31 @@ If you are on **Windows** you can also use **WinSCP** to copy your files to your
 
 - Now, clone your repository into instance.
 
-```console
+```
  git clone link_to_your_repository.git
 ```
 
 - The next step is to  `cd `  into repository and install required packages using
 
-```console
+```
 python3 -m pip install streamlit
 ```
 
 - Now, just run the app and you can see your app live on the External URL.
 
-```console
+```
 streamlit run app.py
 ```
 
 - However in order to keep the app running even after you close SSH shell, you need to use **tmux**. We will use this to create a session and run app in that session.
 
-```console
-sudo yum install tmux
+```
+sudo apt-get install tmux
 tmux new -s NewSession
 ```
 -  You can see that the session name is “NewSession” at the bottom of the screen. You can now start running streamlit in the tmux session.
 
-```console
+```
 streamlit run app.py
 ```
 
