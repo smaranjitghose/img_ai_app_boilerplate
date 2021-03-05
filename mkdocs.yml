@@ -5,7 +5,7 @@ nav:
     - Home: index.md
     - Getting Started: getting_started.md
     - Model Integration: model_integration.md
-    - Frontend Chages: frontend.md
+    - Frontend Changes: frontend.md
     - Online Data Storage: firebase.md
     - Testing: testing.md 
     - Deployment: deployment.md
