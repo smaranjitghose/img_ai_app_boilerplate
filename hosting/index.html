@@ -1,0 +1,823 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Hosting - Image Classification App Boilerplate</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Poppins";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="lime">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hosting-your-app-using-a-cloud-service-provider" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Image Classification App Boilerplate" class="md-header__button md-logo" aria-label="Image Classification App Boilerplate" data-md-component="logo">
+      
+  <img src="../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Image Classification App Boilerplate
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hosting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/smaranjitghose/img_ai_app_boilerplate/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Image Classification App Boilerplate" class="md-nav__button md-logo" aria-label="Image Classification App Boilerplate" data-md-component="logo">
+      
+  <img src="../images/favicon.png" alt="logo">
+
+    </a>
+    Image Classification App Boilerplate
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/smaranjitghose/img_ai_app_boilerplate/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model_integration/" class="md-nav__link">
+        Model Integration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend/" class="md-nav__link">
+        Frontend Changes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firebase/" class="md-nav__link">
+        Online Data Storage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        Testing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Hosting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Hosting
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heroku" class="md-nav__link">
+    Heroku
+  </a>
+  
+    <nav class="md-nav" aria-label="Heroku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-tips" class="md-nav__link">
+    Some useful tips:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-kubernetes-engine" class="md-nav__link">
+    Google Kubernetes Engine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-ec2" class="md-nav__link">
+    Amazon EC2
+  </a>
+  
+    <nav class="md-nav" aria-label="Amazon EC2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec2-setup-form-local-machine" class="md-nav__link">
+    EC2 Setup form Local Machine
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2 Setup form Local Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-environment" class="md-nav__link">
+    Setting Up Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/smaranjitghose/img_ai_app_boilerplate/edit/master/docs/hosting.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="hosting-your-app-using-a-cloud-service-provider">Hosting your app using a cloud service provider</h1>
+<p>Now as per your choice of hosting service, please refer the following guides:</p>
+<h2 id="heroku">Heroku</h2>
+<ul>
+<li>
+<p>Visit <a href="http://heroku.com/">Heroku's website</a>.</p>
+</li>
+<li>
+<p>Log In. If you do not have an account please set it up. [Tip: <em>Using GitHub to setup account makes things easier + you can make use of GitHub Education Pack if you are a student</em>]</p>
+</li>
+<li>
+<p>Open Your <a href="https://dashboard.heroku.com/apps">Dashboard</a></p>
+</li>
+<li>
+<p>Click on Create New App.</p>
+</li>
+<li>
+<p>Give an appropriate name and click <code>next</code>.</p>
+</li>
+<li>
+<p>Change the <code>Deployment method</code> to <code>GitHub</code> and connect your account.</p>
+</li>
+<li>
+<p>Now, search for the repository you made and modified using this template.</p>
+</li>
+<li>
+<p>Connect it.</p>
+</li>
+<li>
+<p>Choose the branch. (Initially, this would be the master branch and later you can have multiple branches to choose from if you are experimenting with prototypes of different models trained for the same task.)</p>
+</li>
+<li>
+<p>Choose either automatic or manual deploy.</p>
+<p><strong>NOTE:</strong> Unless you have a CI like <a href="https://circleci.com/">CircleCI</a> set up in your repository and are aware of how it works please go for <code>Manual Deploy</code> option.</p>
+</li>
+<li>
+<p>Click on <code>Deploy Branch</code>.</p>
+</li>
+</ul>
+<p>Sit back and relax! Your entire app is being setup and will be served in a while.</p>
+<h4 id="some-useful-tips">Some useful tips:</h4>
+<ol>
+<li>
+<p>If you wish to check the size occupied by your files for the deploy in Heroku:</p>
+<ul>
+<li>
+<p>Open your app dashboard</p>
+</li>
+<li>
+<p>Click on <code>More</code> Option on the right of the Menu bar</p>
+</li>
+<li>
+<p>Select <code>Run Console</code></p>
+</li>
+<li>
+<p>Paste the command:
+    <code>$ du -sh * | sort -hr</code></p>
+</li>
+<li>Press Enter.</li>
+</ul>
+</li>
+<li>
+<p>You can add a <code>.slugignore</code> file (Similar to a <code>.gitignore</code> file we use for git to untrack files while we add/commit) to your application to tell the slug compiler to ignore any unnecessary files in your application, such as <em>static assets</em>.</p>
+</li>
+<li>
+<p>To View Logs using CLI:
+    <code>$ heroku logs --tail</code></p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> For the free tier, it is suggested that you use models that are small in size to avoid issues to the limited slug size Heroku Provides.</p>
+<h4 id="references">References</h4>
+<ol>
+<li><a href="https://help.heroku.com/KUFMEES1/my-slug-size-is-too-large-how-can-i-make-it-smaller">My slug size is too large. How can I make it smaller?</a></li>
+</ol>
+<h2 id="google-kubernetes-engine">Google Kubernetes Engine</h2>
+<ul>
+<li>
+<p>Log in to Your preferred Google Account and Open Your <a href="https://console.cloud.google.com/">Google Cloud Console</a></p>
+</li>
+<li>
+<p>Search for Manage Resources</p>
+</li>
+<li>
+<p>Click on create New Project</p>
+</li>
+<li>
+<p>Give a suitable Project Name (say your-project-name)</p>
+</li>
+<li>
+<p>Open Google Cloud Console from the top right</p>
+</li>
+<li>
+<p>Fetch our source code using git</p>
+</li>
+</ul>
+<pre><code>git clone  https://github.com/yourusername/your-project-repo-name.git
+</code></pre>
+<ul>
+<li>Checking what we got</li>
+</ul>
+<pre><code>ls -aH
+</code></pre>
+<ul>
+<li>Navigating to the directory that contains our source code</li>
+</ul>
+<pre><code>cd your-project-repo-name
+</code></pre>
+<ul>
+<li>Setting Project ID Environment Variable</li>
+</ul>
+<pre><code>export PROJECT_ID=export PROJECT_ID=your-project-name
+</code></pre>
+<ul>
+<li>Now let's build our docker image and tag it for uploading</li>
+</ul>
+<p><code>docker build -t gcr.io/${PROJECT_ID}/insurance-streamlit:v1</code></p>
+<ul>
+<li>Checking what we got</li>
+</ul>
+<pre><code>docker images
+</code></pre>
+<ul>
+<li>
+<p>Ensure Google Cloud <a href="https://cloud.google.com/container-registry">Container Registry</a> is enabled</p>
+</li>
+<li>
+<p>Authenticate Google Container Registry</p>
+</li>
+</ul>
+<pre><code>gcloud auth configure-docker
+</code></pre>
+<ul>
+<li>Let's upload our Docker Image to Google Cloud Container Registry</li>
+</ul>
+<pre><code>docker push gcr.io/${PROJECT_ID}/insurance-streamlit:v1
+</code></pre>
+<ul>
+<li>Set up the project ID and Compute Engine Zone for gcloud tool</li>
+</ul>
+<pre><code>gcloud config set project $PROJECT_ID
+gcloud config set compute/zone us-central1
+</code></pre>
+<ul>
+<li>Create a Kubernetes Cluster</li>
+</ul>
+<pre><code>gcloud container clusters create streamlit-cluster --num-nodes=2
+</code></pre>
+<ul>
+<li>Use Kubernetes Cluster Management System to deploy our app replicas and schedule them to run on nodes in the cluster</li>
+</ul>
+<pre><code>kubectl create deployment insurance-streamlit --image=gcr.io/${PROJECT_ID}/insurance-streamlit:v1
+</code></pre>
+<ul>
+<li>Expose the app to Internet traffic by creating an external IP and a Load Balancer</li>
+</ul>
+<pre><code>kubectl expose deployment insurance-streamlit --type=LoadBalancer --port 80 --target-port 8501
+</code></pre>
+<ul>
+<li>Checking our app</li>
+</ul>
+<pre><code>kubectl get service
+</code></pre>
+<ul>
+<li>
+<p>Set up a DNS***</p>
+</li>
+<li>
+<p>Scale up the application by adding additional pods, or delete the Service and container cluster to avoid incurring unwanted charge***</p>
+</li>
+</ul>
+<p>*** Will be covered later</p>
+<h2 id="amazon-ec2">Amazon EC2</h2>
+<ul>
+<li>
+<p>Visit <a href="https://aws.amazon.com/free/">AWS Portal</a>.</p>
+</li>
+<li>
+<p>Log in.
+If you dont have an account set it up. It will ask you for <strong>Credit Card details</strong>.  <br><br>
+[<img alt="💡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4a1.svg" title=":bulb:" /> <strong>Tip</strong>: <em>Use College Email ID if possible, so you can access AWS Educate without any hassle of using a Credit Card or without any fear of charges.</em>] <br> <br>
+[<strong>Caution</strong>: <em>When you create an AWS account, you're automatically signed up for the Free Tier for 12 months. Your Free Tier eligibility expires at the end of the 12-month period. When your Free Tier expires, AWS starts charging the regular rates for any AWS services and resources that you're using.
+For more details refer <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">this</a>.</em>]</p>
+</li>
+<li>
+<p>The new user created will be root user and will have access to all the services and resources (unrestricted access)
+ [<em>Not applicable for people using AWS Educate, though you will have have access to all the services and resources</em>]</p>
+</li>
+<li>
+<p>Search for <strong>EC2 Service</strong> on Management Console Search.</p>
+</li>
+<li>
+<p>On EC2 Dashboard, click on <strong>“Launch Instance”.</strong></p>
+</li>
+<li>
+<p>Choose an AMI (Amazon Machine Instance). Here choose, <strong>Amazon Linux AMI 2018.03.0</strong> as it comes under Free Tier.</p>
+</li>
+<li>
+<p>Choose an Instance Type. Here, choose <strong>t2.micro</strong>. You can opt for a bigger machine to deal with a powerful model or are willing to pay.</p>
+</li>
+<li>
+<p>Configure Instance Details, Add Storage and Tags (<em>All default value, no change, click on Next</em>).</p>
+</li>
+<li>
+<p>Configure Security Group *</p>
+<ol>
+<li>
+<p>SSH (port 22) is by default added to Inbound Rule.</p>
+</li>
+<li>
+<p><strong> Click on Add Rule Type = Custom TCP Rule, Port Range = 8501 and Source: Anywhere.
+</strong> <em>We use the port 8501 here since it is the custom port used by Streamlit.</em></p>
+</li>
+<li>
+<p>Ignore Warning as of now</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click on Review &amp; Launch</p>
+<ol>
+<li><em>Review the configuration you provided, ignore the warning about Security Group as of now.</em></li>
+<li>Click on <strong>“Launch”</strong></li>
+</ol>
+</li>
+<li>
+<p>A pop-up will appear and ask you to Create a new key-pair (Public-Private)</p>
+<ol>
+<li>Select - Create a new key pair</li>
+<li>Provide key pair name = img_ai_app_streamlit</li>
+<li>
+<p>Click on “Download Key Pair”</p>
+<p><img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> Keep this key safe as it would be required every time you need to login to this particular machine.</p>
+</li>
+<li>
+<p>Click on <strong>“Launch Instance”</strong> after downloading the key pair</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click on <strong>View Instances.</strong> You can now go to your instances to see if your instance has started.</p>
+</li>
+</ul>
+<h3 id="ec2-setup-form-local-machine">EC2 Setup form Local Machine</h3>
+<p><em>There are several methods of getting access into our instance using SSH. If you are on a Unix based system such as Linux or macOs you will have SSH already. For Windows users you will need to use putty and puttygen to gain access.</em></p>
+<p><strong>For <em>Unix</em> users</strong></p>
+<ol>
+<li>Your key must not be publicly viewable for SSH to work. Use this command:</li>
+</ol>
+<pre><code>chmod 400 img_ai_app_streamlit.pem
+</code></pre>
+<ol>
+<li>Then, connect to your instance using its Public DNS:</li>
+</ol>
+<pre><code>ssh i img_ai_app_streamlit.pem ec2-user@your_public_dns_address
+</code></pre>
+<p>Select your instance, and copy the Public DNS(IPv4) Address from the description. It should be something starting with ec2.</p>
+<p><strong>For <em>Windows</em> users</strong></p>
+<ul>
+<li>Follow <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console">this</a>.</li>
+</ul>
+<p>Now we are in our AWS EC2 Instance.</p>
+<h4 id="setting-up-environment">Setting Up Environment</h4>
+<ul>
+<li>The next step is to install python and all the necessary libraries for your app.</li>
+</ul>
+<pre><code>sudo apt-get install python3 git
+</code></pre>
+<ul>
+<li>
+<p>After these two installation we can use git to get our app within our instance.<br>
+If you are on <strong>Windows</strong> you can also use <strong>WinSCP</strong> to copy your files to your instance. Refer <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html#Transfer_WinSCP">this</a>.</p>
+</li>
+<li>
+<p>Now, clone your repository into instance.</p>
+</li>
+</ul>
+<pre><code> git clone link_to_your_repository.git
+</code></pre>
+<ul>
+<li>The next step is to  <code>cd</code>  into repository and install required packages using</li>
+</ul>
+<pre><code>python3 -m pip install streamlit
+</code></pre>
+<ul>
+<li>Now, just run the app and you can see your app live on the External URL.</li>
+</ul>
+<pre><code>streamlit run app.py
+</code></pre>
+<ul>
+<li>However in order to keep the app running even after you close SSH shell, you need to use <strong>tmux</strong>. We will use this to create a session and run app in that session.</li>
+</ul>
+<pre><code>sudo apt-get install tmux
+tmux new -s NewSession
+</code></pre>
+<ul>
+<li>You can see that the session name is “NewSession” at the bottom of the screen. You can now start running streamlit in the tmux session.</li>
+</ul>
+<pre><code>streamlit run app.py
+</code></pre>
+<ul>
+<li>
+<p>The next step is to <strong>detach tmux session</strong> so that it continues running in the background when you leave the SSH shell.
+To do this just press <code>Ctrl+B and then D</code></p>
+</li>
+<li>
+<p>You can now close your SSH session and the app will continue running at the External URL.</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../deployment/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Deployment
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://linkedin.com/in/smaranjitghose" target="_blank" rel="noopener" title="linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/smaranjitghose" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "searcn.highlight", "navigation.sections", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+    
+  </body>
+</html>
