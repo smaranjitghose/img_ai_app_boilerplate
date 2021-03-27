@@ -19,14 +19,19 @@ theme:
     palette:
         scheme: slate
         primary: deep purple
+        accent: lime
     font:
         text: Poppins
     features:
         - navigation.expand
         - searcn.highlight
+        - navigation.sections
+        - navigation.top
+        - toc.integrate
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\-\.]+'
 
 google_analytics:
   - UA-XXXXXXXX-X
@@ -34,6 +39,8 @@ google_analytics:
 
 markdown_extensions:
   - attr_list
+  - toc:
+      permalink: false
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
