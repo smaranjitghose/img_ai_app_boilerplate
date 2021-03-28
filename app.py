@@ -4,20 +4,20 @@ from PIL import Image, ImageOps
 import numpy as np
 import time
 from img_classifier import our_image_classifier
-import firebase_bro
-
-# Setting up Streamlit's page config
-st.beta_set_page_config(
-page_title = "Title of the webpage",
-layout = "centered",
-initial_sidebar_state = "collapsed",
-)
+# import firebase_bro
 
 # Just making sure we are not bothered by File Encoding warnings
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
 def main():
+    # Metadata for the web app
+    st.set_page_config(
+    page_title = "Title of the webpage",
+    layout = "centered",
+    page_icon= ":shark:",
+    initial_sidebar_state = "collapsed",
+    )
     menu = ['Home', 'About', 'Contact', 'Feedback']
     choice = st.sidebar.selectbox("Menu", menu)
 
@@ -34,8 +34,8 @@ def main():
             if uploaded_file is not None:
                 # Opening our image
                 image = Image.open(uploaded_file)
-                # Send our image to database for later analysis
-                firebase_bro.send_img(image)
+                # # Send our image to database for later analysis
+                # firebase_bro.send_img(image)
                 # Let's see what we got
                 st.image(image,use_column_width=True)
                 st.write("")
@@ -94,8 +94,8 @@ def main():
 
         # When User clicks the send feedback button
         if st.button('Send Feedback'):
-            # Let's send the data to a Database to store it
-            firebase_bro.send_feedback(first_name, last_name, user_email, feedback)
+            # # Let's send the data to a Database to store it
+            # firebase_bro.send_feedback(first_name, last_name, user_email, feedback)
 
             # Share a Successful Completion Message
             st.success("Your feedback has been shared!")
